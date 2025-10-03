@@ -1,23 +1,17 @@
 # Stew
 
-This project uses [Gradle](https://gradle.org/).
-To build and run the application, use the *Gradle* tool window by clicking the Gradle icon in the right-hand toolbar,
-or run it directly from the terminal:
+<p align="center">
+  <img src="creepermultidrop/src/main/resources/assets/creepermultidrop/icon.png" width="256" height="256" />
+  <img src="dudewhatsmygepeuwu/src/client/resources/assets/dudewhatsmygepeuwu/icon.png" width="256" height="256" />
+  <img src="rainbethunder/src/main/resources/assets/rainbethunder/icon.png" width="256" height="256" />
+</p>
 
-* Run `./gradlew run` to build and run the application.
-* Run `./gradlew build` to only build the application.
-* Run `./gradlew check` to run all checks, including tests.
-* Run `./gradlew clean` to clean all build outputs.
+This is a monorepo for Creeper Multidrop, DudeWhatsMyGePeUwu, RainBeThunder, and any other QOL tweaks/patches mods to be
+used by devOS servers.
 
-Note the usage of the Gradle Wrapper (`./gradlew`).
-This is the suggested way to use Gradle in production projects.
+## Screenshots and Other Info
 
-[Learn more about the Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
+// TODO
 
-[Learn more about Gradle tasks](https://docs.gradle.org/current/userguide/command_line_interface.html#common_tasks).
-
-This project follows the suggested multi-module setup and consists of the `app` and `utils` subprojects.
-The shared build logic was extracted to a convention plugin located in `buildSrc`.
-
-This project uses a version catalog (see `gradle/libs.versions.toml`) to declare and version dependencies
-and both a build cache and a configuration cache (see `gradle.properties`).
+## License
+All projects are licensed under the [MIT license](LICENSE).
