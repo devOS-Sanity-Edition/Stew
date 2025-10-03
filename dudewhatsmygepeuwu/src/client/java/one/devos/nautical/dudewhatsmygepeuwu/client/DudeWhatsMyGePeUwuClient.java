@@ -1,7 +1,6 @@
 package one.devos.nautical.dudewhatsmygepeuwu.client;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +10,6 @@ public class DudeWhatsMyGePeUwuClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
         LOGGER.info("[" + MOD_ID + "] GPU ready to be obliterated");
     }
 }

@@ -1,6 +1,5 @@
 package one.devos.nautical.rainbethunder;
 
-
 import gay.asoji.fmw.FMW;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
