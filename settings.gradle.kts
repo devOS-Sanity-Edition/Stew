@@ -1,0 +1,36 @@
+dependencyResolutionManagement {
+    @Suppress("UnstableApiUsage")
+    repositories {
+        mavenCentral()
+    }
+
+    versionCatalogs {
+        create("common") {
+            from(files("gradle/common.versions.toml"))
+        }
+    }
+}
+
+pluginManagement {
+    repositories {
+        maven {
+            name = "Fabric"
+            url = uri("https://maven.fabricmc.net/")
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    // Use the Foojay Toolchains plugin to automatically download JDKs required by subprojects.
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+}
+
+rootProject.name = "Stew"
+
+include("dudewhatsmygpuwu")
+include("creepermultidrop")
+include("rainbethunder")
+include("nicespice")
+include("windower")
