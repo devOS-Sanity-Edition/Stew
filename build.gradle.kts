@@ -109,6 +109,7 @@ subprojects {
         }
     }
 
+
     tasks.jar {
         from("LICENSE") {
             rename { "${it}_${project.base.archivesName.get()}" }
@@ -139,7 +140,6 @@ fun getModVersion(projectName: String): String {
 
     if (gitExitCode == 0) { // 0 = git is installed, anything else, prob not.
         val buildId = providers.exec { commandLine("git", "rev-parse", "--short", "HEAD")}.standardOutput.asText.get().trim()
-        val branch = providers.exec { commandLine("git", "branch", "--show-current") }.standardOutput.asText.get().replace("/", ".").trim()
         val dirtyStateCmd = providers.exec { commandLine("git", "status", "--porcelain") }.standardOutput.asText.get().trim()
 
         fun dirtyStateText(): String {
@@ -150,7 +150,7 @@ fun getModVersion(projectName: String): String {
             }
         }
 
-        return "$modVersion+rev.$buildId-branch.$branch${dirtyStateText()}"
+        return "$modVersion+rev.$buildId${dirtyStateText()}"
     } else {
         return "$modVersion+unknown"
     }
