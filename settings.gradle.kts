@@ -29,8 +29,8 @@ plugins {
 
 rootProject.name = "Stew"
 
-include("dudewhatsmygpuwu")
+include("clientier")
 include("creepermultidrop")
-include("rainbethunder")
+include("dudewhatsmygpuwu")
 include("nicespice")
-include("windower")
+include("rainbethunder")
