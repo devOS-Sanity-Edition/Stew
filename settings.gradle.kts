@@ -31,6 +31,6 @@ rootProject.name = "Stew"
 
 include("clientier")
 include("creepermultidrop")
-include("dudewhatsmygpuwu")
+include("dudewhatsmygepeuwu")
 include("nicespice")
 include("rainbethunder")

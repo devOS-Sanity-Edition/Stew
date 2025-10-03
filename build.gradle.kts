@@ -38,10 +38,10 @@ subprojects {
     val mappings: Configuration by configurations.getting
     val minecraft: Configuration by configurations.getting
     val modImplementation: Configuration by configurations.getting
+    val modLocalRuntime: Configuration by configurations.getting
     val modRuntimeOnly: Configuration by configurations.getting
 
     val fabricApiVersion = rootProject.common.fabric.api.get().version
-    val fabricLanguageKotlinVersion = rootProject.common.fabric.language.kotlin.get().version
     val fabricLoaderVersion = rootProject.common.fabric.loader.get().version
     val minecraftVersion = rootProject.common.minecraft.get().version
     val javaVersion = rootProject.java.sourceCompatibility.majorVersion
@@ -58,14 +58,11 @@ subprojects {
 
         modImplementation(rootProject.common.fabric.loader)
         modImplementation(rootProject.common.fabric.api)
-        modImplementation(rootProject.common.fabric.language.kotlin)
 
         include(modImplementation(rootProject.common.fmw.get())!!)
-        include(implementation(annotationProcessor(rootProject.common.mixinsquared.get())!!)!!)
-        include(implementation(rootProject.common.mixinconstraints.get())!!)
 
-        modRuntimeOnly(rootProject.common.devauth)
-        modImplementation(rootProject.common.bundles.devenv)
+        modLocalRuntime(rootProject.common.devauth)
+        modLocalRuntime(rootProject.common.bundles.devenv)
     }
 
     loom.splitEnvironmentSourceSets()
@@ -96,7 +93,6 @@ subprojects {
 
             // dependency vers
             "fabric_api" to ">=$fabricApiVersion",
-            "fabric_language_kotlin" to ">=$fabricLanguageKotlinVersion",
             "fabric_loader" to ">=$fabricLoaderVersion",
             "java" to ">=$javaVersion",
             "minecraft" to "~$minecraftVersion",
