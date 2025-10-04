@@ -44,7 +44,7 @@ subprojects {
     val fabricApiVersion = rootProject.common.fabric.api.get().version
     val fabricLoaderVersion = rootProject.common.fabric.loader.get().version
     val minecraftVersion = rootProject.common.minecraft.get().version
-    val javaVersion = rootProject.java.sourceCompatibility.majorVersion
+    val javaVersion = rootProject.java.toolchain.languageVersion
 
     group = "one.devos.nautical"
     version = getModVersion(project.name)
