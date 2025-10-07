@@ -8,6 +8,10 @@ dependencyResolutionManagement {
         create("common") {
             from(files("gradle/common.versions.toml"))
         }
+
+        create("nicespice") {
+            from(files("gradle/nicespice.versions.toml"))
+        }
     }
 }
 

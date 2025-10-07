@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "nicespice",
+  "version": "${version}",
+  "name": "Nice Spice",
+  "description": "a mod that adds some server commands for attention, no sleep, and restart [shutdown actually]",
+  "authors": [
+    "devOS: Sanity Edition",
+    "Team Nautical"
+  ],
+  "contributors": [
+    "asojidev",
+    "BluSpring",
+    "Deftu"
+  ],
+  "contact": {
+    "homepage": "https://devos.one/",
+    "sources": "https://github.com/devOS-Sanity-Edition/Stew",
+    "issues": "https://github.com/devOS-Sanity-Edition/Stew/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/nicespice/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "one.devos.nautical.nicespice.NiceSpice"
+      }
+    ]
+  },
+  "mixins": [
+    "nicespice.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "${fabric_api}",
+    "fabric-language-kotlin": "${fabric_language_kotlin}",
+    "fabricloader": "${fabric_loader}",
+    "minecraft": "${minecraft}",
+    "java": "${java}"
+  }
+}

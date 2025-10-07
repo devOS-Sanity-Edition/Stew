@@ -42,6 +42,7 @@ subprojects {
     val modRuntimeOnly: Configuration by configurations.getting
 
     val fabricApiVersion = rootProject.common.fabric.api.get().version
+    val fabricLanguageKotlinVersion = rootProject.common.fabric.language.kotlin.get().version
     val fabricLoaderVersion = rootProject.common.fabric.loader.get().version
     val minecraftVersion = rootProject.common.minecraft.get().version
     val javaVersion = rootProject.java.toolchain.languageVersion
@@ -93,6 +94,7 @@ subprojects {
 
             // dependency vers
             "fabric_api" to ">=$fabricApiVersion",
+            "fabric_language_kotlin" to ">=$fabricLanguageKotlinVersion",
             "fabric_loader" to ">=$fabricLoaderVersion",
             "java" to ">=$javaVersion",
             "minecraft" to "~$minecraftVersion",
