@@ -45,7 +45,7 @@ subprojects {
     val fabricLanguageKotlinVersion = rootProject.common.fabric.language.kotlin.get().version
     val fabricLoaderVersion = rootProject.common.fabric.loader.get().version
     val minecraftVersion = rootProject.common.minecraft.get().version
-    val javaVersion = rootProject.java.toolchain.languageVersion
+    val javaVersion = 21
 
     group = "one.devos.nautical"
     version = getModVersion(project.name)
@@ -83,22 +83,26 @@ subprojects {
         withSourcesJar()
 
         toolchain {
-            languageVersion = JavaLanguageVersion.of(21)
+            languageVersion = JavaLanguageVersion.of(javaVersion)
         }
     }
 
     tasks.processResources {
-        val properties: Map<String, Any> = mapOf(
-            // mod vers
-            "version" to project.version,
 
-            // dependency vers
-            "fabric_api" to ">=$fabricApiVersion",
-            "fabric_language_kotlin" to ">=$fabricLanguageKotlinVersion",
-            "fabric_loader" to ">=$fabricLoaderVersion",
-            "java" to ">=$javaVersion",
-            "minecraft" to "~$minecraftVersion",
-        )
+
+        val properties: Map<String, Any> by lazy {
+            mapOf(
+                // mod vers
+                "version" to project.version,
+
+                // dependency vers
+                "fabric_api" to ">=$fabricApiVersion",
+                "fabric_language_kotlin" to ">=$fabricLanguageKotlinVersion",
+                "fabric_loader" to ">=$fabricLoaderVersion",
+                "java" to ">=${javaVersion}",
+                "minecraft" to "~$minecraftVersion",
+            )
+        }
 
         inputs.properties(properties)
 
