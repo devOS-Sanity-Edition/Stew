@@ -1,4 +1,4 @@
-package one.devos.nautical.winterisms.client.titlebar
+package one.devos.nautical.clientier.titlebar
 
 import com.sun.jna.Library
 import com.sun.jna.Native

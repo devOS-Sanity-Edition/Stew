@@ -2,7 +2,7 @@ package one.devos.nautical.clientier.mixins;
 
 import com.sun.jna.Platform;
 import net.minecraft.client.Minecraft;
-import one.devos.nautical.winterisms.client.titlebar.DarkModeTitleBar;
+import one.devos.nautical.clientier.titlebar.DarkModeTitleBar;
 import org.lwjgl.glfw.GLFWNativeWin32;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
