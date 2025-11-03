@@ -3,7 +3,7 @@
 import net.fabricmc.loom.api.LoomGradleExtensionAPI
 
 plugins {
-    kotlin("jvm") version "2.2.20" apply false
+    kotlin("jvm") version "2.2.21" apply false
     java
     `maven-publish`
 
@@ -54,6 +54,7 @@ subprojects {
         minecraft(rootProject.common.minecraft)
 
         mappings(loom.layered {
+            parchment(rootProject.common.parchment.get())
             officialMojangMappings()
         })
 
