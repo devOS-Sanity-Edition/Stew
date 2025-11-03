@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "one.devos.nautical.clientier.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "DisableVanillaTitleMixin",
+    "WindowQOIDataMixin",
+    "WindowTitlebarMixin"
+  ],
+  "mixins": [
+    "CrashReportRoombaMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

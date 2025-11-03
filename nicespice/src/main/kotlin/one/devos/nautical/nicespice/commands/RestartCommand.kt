@@ -1,4 +1,4 @@
-package one.devos.nautical.winterisms.commands
+package one.devos.nautical.nicespice.commands
 
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType

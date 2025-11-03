@@ -12,6 +12,10 @@ dependencyResolutionManagement {
         create("nicespice") {
             from(files("gradle/nicespice.versions.toml"))
         }
+
+        create("clientier") {
+            from(files("gradle/clientier.versions.toml"))
+        }
     }
 }
 

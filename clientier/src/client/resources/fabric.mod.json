@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "clientier",
+  "version": "${version}",
+  "name": "Clientier",
+  "description": "Changes the game's window title and icon",
+  "authors": [
+    "devOS: Sanity Edition",
+    "Team Nautical"
+  ],
+  "contributors": [
+    "asojidev"
+  ],
+  "contact": {
+    "homepage": "https://devos.one/",
+    "sources": "https://github.com/devOS-Sanity-Edition/Stew",
+    "issues": "https://github.com/devOS-Sanity-Edition/Stew/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/clientier/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "preLaunch": [
+      {
+        "adapter": "kotlin",
+        "value": "one.devos.nautical.clientier.crash.RoombaCrash::init"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "one.devos.nautical.clientier.Clientier"
+      }
+    ],
+    "modmenu": [
+      {
+        "adapter": "kotlin",
+        "value": "one.devos.nautical.clientier.config.ConfigEntrypoint"
+      }
+    ]
+  },
+  "mixins": [
+    "clientier.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "${fabric_api}",
+    "fabric-language-kotlin": "${fabric_language_kotlin}",
+    "fabricloader": "${fabric_loader}",
+    "minecraft": "${minecraft}",
+    "java": "${java}"
+  }
+}

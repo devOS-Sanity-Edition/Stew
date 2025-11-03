@@ -9,7 +9,7 @@ import net.minecraft.network.chat.Component
 import net.minecraft.world.BossEvent
 import one.devos.nautical.nicespice.commands.BossbarShenanigans
 import one.devos.nautical.nicespice.commands.requestCommand
-import one.devos.nautical.winterisms.commands.restartCommand
+import one.devos.nautical.nicespice.commands.restartCommand
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 

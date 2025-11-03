@@ -1,0 +1,17 @@
+[versions]
+brotli = "0.1.2"
+essential_elementa = "714"
+essential_universalcraft = "436"
+ini4j = "0.5.4"
+jna = "5.17.0"
+qoi = "1.2.1"
+
+[libraries]
+brotli = { module = "org.brotli:dec", version.ref = "brotli" }
+essential_elementa = { module = "gg.essential:elementa", version.ref = "essential_elementa" }
+essential_universalcraft = { module = "gg.essential:universalcraft-1.21.9-fabric", version.ref = "essential_universalcraft" }
+ini4j = { module = "org.ini4j:ini4j", version.ref = "ini4j" }
+jna_main = { module = "net.java.dev.jna:jna", version.ref = "jna" }
+jna_platform = { module = "net.java.dev.jna:jna-platform", version.ref = "jna" }
+qoi_awt = { module = "me.saharnooby:qoi-java-awt", version.ref = "qoi" }
+qoi_main = { module = "me.saharnooby:qoi-java", version.ref = "qoi" }
