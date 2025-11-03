@@ -54,7 +54,7 @@ subprojects {
         minecraft(rootProject.common.minecraft)
 
         mappings(loom.layered {
-            parchment(rootProject.common.parchment.get())
+//            parchment(rootProject.common.parchment.get())
             officialMojangMappings()
         })
 
