@@ -6,9 +6,7 @@
   "client": [
     "DisableVanillaTitleMixin",
     "WindowQOIDataMixin",
-    "WindowTitlebarMixin"
-  ],
-  "mixins": [
+    "WindowTitlebarMixin",
     "CrashReportRoombaMixin"
   ],
   "injectors": {
